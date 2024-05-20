@@ -6,4 +6,4 @@ A todo-app using simple html, css and JS (vanilla)
 * On reopening the browser or again running the live server, the tasks will be there.
 * You can click on tasks to check the completed tasks 
 * Reclicking the task will uncheck it
-   
+   ![alt text](image.png)
