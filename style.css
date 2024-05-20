@@ -6,7 +6,7 @@
 }
 
 .container {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: linear-gradient(135deg, black, #002765);
     padding: 10px;
@@ -50,13 +50,14 @@ input {
     outline: none;
     background: transparent;
     padding: 10px;
+    min-width: 0;
 
 }
 
 button {
     border: none;
     outline: none;
-    padding: 16px 50px;
+    padding: 16px 28px;
     background: #155fc1;
     color: #fff;
     font-size: 16px;
@@ -72,6 +73,8 @@ ul li {
     cursor: pointer;
     user-select: none;
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 ul li::before {
@@ -85,6 +88,7 @@ ul li::before {
     background-position: center;
     top: 12px;
     left: 8px;
+    margin-right: 10px;
 }
 
 ul li.checked {
@@ -109,8 +113,34 @@ ul li span {
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
+    flex-shrink: 0;
+    
 }
 
 ul li span:hover{
     background: #edeef0;
+}
+
+@media (max-width: 600px) {
+    .todo-app {
+        margin: 50px auto 20px;
+        padding: 20px 15px 35px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    input {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px; 
+    }
 }

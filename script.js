@@ -17,6 +17,11 @@ function addTask(){
     saveData();
 }
 
+inputBox.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+});
 
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName==="LI"){
